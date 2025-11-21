@@ -154,3 +154,52 @@ navLinks.forEach(link => {
     }
 });
 
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTop');
+if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Animate skill progress bars on scroll
+const animateProgressBars = () => {
+    const progressBars = document.querySelectorAll('.skill-progress-fill');
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+                observer.unobserve(bar);
+            }
+        });
+    }, observerOptions);
+
+    progressBars.forEach(bar => observer.observe(bar));
+};
+
+// Initialize progress bar animation when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    animateProgressBars();
+});
+

@@ -25,6 +25,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -58,6 +59,25 @@
                         insights from web data. I believe in writing clean, maintainable code and continuously 
                         learning new technologies to stay at the forefront of development.
                     </p>
+                    
+                    <div class="profile-info">
+                        <div class="profile-info-item">
+                            <strong>Fullname</strong>
+                            <span>Md Rafiu Islam</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <strong>Current Position</strong>
+                            <span>Student & Developer</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <strong>Website</strong>
+                            <span><a href="https://showpno.github.io/portfolio/" target="_blank" style="color: var(--primary-color);">showpno.github.io</a></span>
+                        </div>
+                        <div class="profile-info-item">
+                            <strong>Email</strong>
+                            <span><a href="mailto:mdrafiuislamshowpno@gmail.com" style="color: var(--primary-color);">mdrafiuislamshowpno@gmail.com</a></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,7 +128,58 @@
     <section class="skills-section">
         <div class="container">
             <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-categories">
+            
+            <!-- Skills with Progress Bars -->
+            <div class="skill-progress">
+                <div class="skill-progress-item">
+                    <div class="skill-progress-header">
+                        <span class="skill-progress-name">Web Scraping</span>
+                        <span class="skill-progress-percent">90%</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-progress-item">
+                    <div class="skill-progress-header">
+                        <span class="skill-progress-name">API Integration</span>
+                        <span class="skill-progress-percent">85%</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-progress-item">
+                    <div class="skill-progress-header">
+                        <span class="skill-progress-name">Automation</span>
+                        <span class="skill-progress-percent">88%</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-progress-item">
+                    <div class="skill-progress-header">
+                        <span class="skill-progress-name">Python</span>
+                        <span class="skill-progress-percent">85%</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-progress-item">
+                    <div class="skill-progress-header">
+                        <span class="skill-progress-name">JavaScript</span>
+                        <span class="skill-progress-percent">75%</span>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Categories -->
+            <div class="skills-categories" style="margin-top: 3rem;">
                 <div class="skill-category">
                     <h3><i class="fas fa-spider"></i> Web Scraping</h3>
                     <div class="skill-tags">
@@ -173,6 +244,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
